@@ -1,0 +1,39 @@
+{# templates/partials/footer.html.twig #}
+<footer>
+  <style>
+      /* Footer styling */
+      footer {
+          background-color: #f8f9fa; /* Matches Bootstrap's bg-light from navbar */
+          padding: 1.5rem 0;
+          text-align: center;
+          border-top: 1px solid #e9ecef;
+          margin-top: 2rem;
+      }
+
+      footer p {
+          margin: 0;
+          font-size: 1rem;
+          color: #2c3e50; /* Matches heading color from About page */
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
+          footer {
+              padding: 1rem 0;
+          }
+
+          footer p {
+              font-size: 0.9rem;
+          }
+      }
+      footer .credit { color: #e74c3c; }
+      footer a {
+        color: #3498db;
+        text-decoration: none;
+        margin: 0 0.5rem;
+    }
+    footer a:hover { text-decoration: underline; }
+  </style>
+
+  <p>© 2025 - Mon Site Symfony | <span class="credit">Built with ❤️ By R'H Mohamed</span></p>
+</footer>

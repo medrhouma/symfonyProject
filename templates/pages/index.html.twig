@@ -1,0 +1,114 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<style>
+    /* General styling for the page */
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f4f4f9;
+        color: #333;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+    }
+
+    /* Container for images */
+    .image-container {
+        max-width: 800px;
+        margin: 20px auto;
+        text-align: center;
+    }
+
+    /* Styling for images */
+    .img-fluid {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .img-fluid:hover {
+        transform: scale(1.05);
+    }
+
+    /* Heading styling */
+    h1 {
+        text-align: center;
+        font-size: 2.5rem;
+        color: #2c3e50;
+        margin: 30px 0;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    /* Paragraph styling */
+    p {
+        text-align: center;
+        font-size: 1.2rem;
+        color: #555;
+        margin: 20px 0;
+    }
+
+    /* Footer text styling */
+    .image-container + div {
+        text-align: center;
+        font-size: 1rem;
+        color: #e74c3c;
+        margin: 20px 0;
+    }
+
+    /* Link styling */
+    a {
+        display: inline-block;
+        text-align: center;
+        font-size: 1.1rem;
+        color: #3498db;
+        text-decoration: none;
+        padding: 10px 20px;
+        border: 2px solid #3498db;
+        border-radius: 5px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        margin: 20px auto;
+        display: block;
+        width: fit-content;
+    }
+
+    a:hover {
+        background-color: #3498db;
+        color: #fff;
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+        h1 {
+            font-size: 2rem;
+        }
+
+        .image-container {
+            padding: 0 10px;
+        }
+
+        .img-fluid {
+            border-radius: 5px;
+        }
+
+        a {
+            font-size: 1rem;
+            padding: 8px 15px;
+        }
+    }
+</style>
+
+<div class="image-container">
+    <img src="{{ asset('degache.jpeg') }}" alt="Degache" class="img-fluid">
+</div>
+<h1>Hello From Tunisia</h1>
+<p>It's currently {{ 'now' | date('Y-m-d H:i:s') }}</p>
+<div class="image-container">
+    <img src="{{ asset('est.jpg') }}" alt="Degache" class="img-fluid">
+</div>
+<div>Best Team Ever</div>
+
+<a href="{{ path('app_about') }}">About</a>
+{% endblock %}
